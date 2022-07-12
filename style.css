@@ -1,0 +1,166 @@
+.odd,
+.even {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 64px;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  background: #000;
+  border-radius: 18px;
+  box-shadow: 0 0 7px 1px rgb(212, 212, 212);
+  padding: 6px 24px;
+  margin: 28px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+.maze-size input {
+  width: 30%;
+  font-size: 18px;
+}
+
+body > div {
+  display: flex;
+  /* align-items: center; */
+  position: relative;
+  justify-content: space-evenly;
+  font-size: 18px;
+  flex-direction: column;
+  font-family: cursive;
+  /* color: blue; */
+}
+
+body > div:nth-child(1){
+  border: 1px solid;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.type input{
+display: none;
+}
+
+.type{
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.slider {
+  margin-bottom: 12px;
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 2em;
+  color: #999;
+  font-weight: 400;
+}
+
+.range {
+  width: 300px;
+  height: 8px;
+  -webkit-appearance: none;
+  background: #2f2f2f;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00fd0a;
+  cursor: pointer;
+  border: 3px solid #333;
+  box-shadow: -407px 0 0 400px #00fd0a;
+}
+
+.type input:checked + label{
+  background-color: #000;
+  color: #fff;
+}
+
+.type label{
+width: 140px;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 4px;
+}
+
+.odd > div,
+.even > div {
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+}
+
+body > div img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  /* transition: .05s ease all; */
+}
+
+#canvas {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+/* .odd > div:focus,
+.odd > div:active,
+.even > div:focus,
+.even > div:active {
+  background: green;
+  opacity: 0.9;
+} */
+
+.odd > div:nth-child(odd) {
+  background-color: black;
+}
+
+.even > div:nth-child(even) {
+  background-color: black;
+}
+
+.even:nth-child(even) {
+  background-color: white;
+}
+.even:nth-child(odd) {
+  background-color: black;
+}

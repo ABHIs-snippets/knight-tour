@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div>
+        <div class="board" id="board">
+        </div>
+        <img src="./knight.svg" alt="">
+        <canvas id="canvas" ></canvas>
+    </div>
+    <div class="panel">
+        <h1>Knight Tour</h1>
+        <div class="maze-size">
+            <h3 style="padding-bottom: 6px;">Chess Size</h3>
+            <Input type="number" value="8" min="3" max="10" id="xCord"></Input>
+            &nbsp;
+            &times;
+            &nbsp;
+            <Input type="number" value="8" min="3" max="10" id="yCord"></Input>
+            <button type="button" onclick="refresh()">Refresh</button>
+        </div>
+       <div class="type">
+           <h3>Type:</h3>
+           <br>
+           <input type="radio" name="type" id="Backtrack" onchange="selectionType()">
+           <label for="Backtrack">
+               Backtrack
+            </label>
+            <input type="radio" name="type" id="warn" checked onchange="selectionType()">
+           <label for="warn">
+               Warnsdorff
+           </label>
+       </div>
+       <br>
+       <div class="slider">
+        <h3 style="padding-bottom: 6px;">Speed</h3>
+        <Input class="range" type="range" value="80" min="0" max="100" onchange="rangeSlide(this.value)"
+            onmousemove="rangeSlide(this.value)"></Input>
+    </div>
+    </div>
+    <!-- <img src="" width="200px" height="200px" id="result" alt=""> -->
+
+      <script src="./main.js" defer></script>
+</body>
+</html>
